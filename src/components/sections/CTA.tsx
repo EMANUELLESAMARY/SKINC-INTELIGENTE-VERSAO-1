@@ -30,6 +30,22 @@ export const CTA = () => {
           <Button 
             href="https://pay.hotmart.com/A104700280D?checkoutMode=10&bid=1775493345458" 
             className="w-full text-2xl py-6"
+            onClick={(e) => {
+              e.preventDefault();
+              const checkoutUrl = "https://pay.hotmart.com/A104700280D?checkoutMode=10&bid=1775493345458";
+              
+              if (typeof (window as any).fbq === 'function') {
+                (window as any).fbq('track', 'InitiateCheckout', {
+                  content_name: 'LP Checkout',
+                  value: 97.00,
+                  currency: 'BRL'
+                });
+              }
+              
+              setTimeout(() => {
+                window.location.href = checkoutUrl;
+              }, 200);
+            }}
           >
             QUERO MEU ACESSO AGORA
           </Button>
