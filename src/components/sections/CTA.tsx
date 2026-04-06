@@ -22,12 +22,15 @@ export const CTA = () => {
           <p className="text-lg text-gray-300 mb-4 uppercase tracking-widest font-bold">Oferta de Lançamento</p>
           <div className="flex flex-col items-center gap-2 mb-8">
             <span className="text-2xl text-gray-500 line-through">R$ 97,00</span>
-            <span className="text-6xl font-display font-black text-white">R$ 67,00</span>
-            <p className="text-xl font-bold text-brand-lime">ou 9x de R$ 8,80</p>
+            <span className="text-6xl font-display font-black text-white">R$ 47,00</span>
+            <p className="text-xl font-bold text-brand-lime">ou 6x de R$ 8,82</p>
             <p className="text-sm text-brand-pink font-bold uppercase tracking-widest mt-1">Valor Promocional</p>
           </div>
           
-          <Button className="w-full text-2xl py-6">
+          <Button 
+            href="https://pay.hotmart.com/A104700280D?checkoutMode=10&bid=1775493345458" 
+            className="w-full text-2xl py-6"
+          >
             QUERO MEU ACESSO AGORA
           </Button>
           

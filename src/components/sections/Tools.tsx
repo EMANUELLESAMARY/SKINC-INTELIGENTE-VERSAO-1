@@ -6,6 +6,35 @@ import { Card } from "../ui/Card";
 export const Tools = () => {
   return (
     <Section variant="contrast" id="tools">
+      <div className="max-w-4xl mx-auto text-center mb-10">
+        <h3 className="text-2xl md:text-3xl font-display font-bold text-white uppercase tracking-tight">
+          Veja o que estão falando:
+        </h3>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-20">
+        {[
+          "https://i.postimg.cc/RZwrq9qs/essa_1.jpg",
+          "https://i.postimg.cc/Jh8fkgkt/essa_2.jpg"
+        ].map((src, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.1 }}
+            className="relative group"
+          >
+            <div className="absolute -inset-2 bg-brand-pink/10 blur-xl rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
+            <img 
+              src={src} 
+              alt={`Depoimento ${i + 1}`} 
+              className="relative rounded-2xl w-full shadow-xl border border-white/5 hover:border-brand-pink/30 transition-colors"
+              referrerPolicy="no-referrer"
+            />
+          </motion.div>
+        ))}
+      </div>
+
       <SectionHeader 
         title="Ferramentas Exclusivas" 
         subtitle="Além do protocolo, você recebe acesso a sistemas inteligentes de monitoramento."

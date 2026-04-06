@@ -49,31 +49,6 @@ export const Testimonials = () => {
             </div>
           </Card>
         </div>
-
-        {/* Screenshot Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {[
-            "https://i.postimg.cc/RZwrq9qs/essa_1.jpg",
-            "https://i.postimg.cc/Jh8fkgkt/essa_2.jpg"
-          ].map((src, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="relative group"
-            >
-              <div className="absolute -inset-2 bg-brand-pink/10 blur-xl rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
-              <img 
-                src={src} 
-                alt={`Depoimento ${i + 1}`} 
-                className="relative rounded-2xl w-full shadow-xl border border-white/5 hover:border-brand-pink/30 transition-colors"
-                referrerPolicy="no-referrer"
-              />
-            </motion.div>
-          ))}
-        </div>
       </div>
     </Section>
   );

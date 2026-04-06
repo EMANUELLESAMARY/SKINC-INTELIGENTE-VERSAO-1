@@ -72,17 +72,17 @@ export const Hero = () => {
             <span className="text-gray-400 line-through text-xl">De R$97</span>
             <div className="flex flex-col items-center">
               <span className="text-5xl md:text-6xl font-display font-black text-brand-lime">
-                R$ 67 à vista
+                R$ 47 à vista
               </span>
               <span className="text-xl md:text-2xl font-bold text-white">
-                ou 9x de R$ 8,80
+                ou 6x de R$ 8,82
               </span>
               <span className="text-sm uppercase tracking-widest text-brand-pink font-bold mt-1">Valor Promocional</span>
             </div>
           </div>
           
           <Button href="#checkout" className="text-xl group">
-            Quero meu Skincare IA agora
+            Quero meu IA Skincare agora
             <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
           </Button>
           
