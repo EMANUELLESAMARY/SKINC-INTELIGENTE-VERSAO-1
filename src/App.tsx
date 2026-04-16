@@ -7,12 +7,12 @@ import { Bonuses } from "./components/sections/Bonuses";
 import { Benefits } from "./components/sections/Benefits";
 import { CTA } from "./components/sections/CTA";
 import { Footer } from "./components/sections/Footer";
+import { NotificationPopup } from "./components/ui/NotificationPopup";
 
 export default function App() {
   return (
     <div className="min-h-screen">
       <Hero />
-      <Testimonials />
       <Training />
       <HowItWorks />
       <Tools />
@@ -20,6 +20,7 @@ export default function App() {
       <Benefits />
       <CTA />
       <Footer />
+      <NotificationPopup />
     </div>
   );
 }

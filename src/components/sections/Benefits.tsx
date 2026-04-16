@@ -6,7 +6,7 @@ import { Card } from "../ui/Card";
 export const Benefits = () => {
   return (
     <Section variant="contrast" id="benefits">
-      <SectionHeader title="Por que confiar na Skincare IA?" />
+      <SectionHeader title="Por que confiar no Resgate Capilar 30D?" />
       
       {/* Expert Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
