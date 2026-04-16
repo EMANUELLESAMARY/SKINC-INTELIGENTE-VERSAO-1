@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { ArrowRight } from "lucide-react";
 import { Section } from "../ui/Section";
 import { Card } from "../ui/Card";
 import { Button } from "../ui/Button";
@@ -12,19 +13,19 @@ export const CTA = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-7xl font-display font-black leading-tight"
+          className="text-5xl md:text-7xl font-display font-black leading-tight uppercase tracking-tighter"
         >
-          Sua pele merece <br />
-          <span className="gradient-text">ciência, não sorte.</span>
+          Sua recuperação <br />
+          <span className="gradient-text">capilar começa agora</span>
         </motion.h2>
         
         <Card variant="glass" className="border-brand-pink/40 max-w-lg mx-auto p-10">
-          <p className="text-lg text-gray-300 mb-4 uppercase tracking-widest font-bold">Oferta de Lançamento</p>
+          <p className="text-lg text-gray-300 mb-4 uppercase tracking-widest font-bold">Oferta do Desafio 30 Dias</p>
           <div className="flex flex-col items-center gap-2 mb-8">
-            <span className="text-2xl text-gray-500 line-through">R$ 97,00</span>
-            <span className="text-6xl font-display font-black text-white">R$ 47,00</span>
-            <p className="text-xl font-bold text-brand-lime">ou 6x de R$ 8,82</p>
-            <p className="text-sm text-brand-pink font-bold uppercase tracking-widest mt-1">Valor Promocional</p>
+            <span className="text-2xl text-gray-500 line-through lowercase">De R$ 197,00 por apenas</span>
+            <span className="text-7xl font-display font-black text-white">R$ 37,00</span>
+            <p className="text-xl font-bold text-brand-lime uppercase">ou 12x de R$ 3,71</p>
+            <p className="text-sm text-brand-pink font-bold uppercase tracking-widest mt-1">Acesso Vitalício + Bônus</p>
           </div>
           
           <Button 
@@ -36,8 +37,8 @@ export const CTA = () => {
               
               if (typeof (window as any).fbq === 'function') {
                 (window as any).fbq('track', 'InitiateCheckout', {
-                  content_name: 'LP Checkout',
-                  value: 97.00,
+                  content_name: 'Hair Recovery Checkout',
+                  value: 37.00,
                   currency: 'BRL'
                 });
               }
@@ -57,8 +58,8 @@ export const CTA = () => {
           </div>
         </Card>
         
-        <p className="text-gray-500 text-sm">
-          Garantia de 7 dias. Se não gostar, devolvemos seu dinheiro.
+        <p className="text-gray-500 text-sm font-bold uppercase tracking-widest leading-loose">
+          Garantia de 7 dias. <br /> Se não gostar, devolvemos seu dinheiro sem burocracia.
         </p>
       </div>
     </Section>

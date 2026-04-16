@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Smartphone, Brain, Sparkles, ArrowRight, ShieldCheck, ChevronDown } from "lucide-react";
+import { ArrowRight, Activity, Zap, AlertTriangle, ShieldCheck, ChevronDown } from "lucide-react";
 import { Button } from "../ui/Button";
 
 export const Hero = () => {
@@ -23,15 +23,15 @@ export const Hero = () => {
           transition={{ delay: 0.2 }}
           className="inline-block px-4 py-1.5 rounded-full bg-brand-pink/10 border border-brand-pink/30 text-brand-pink font-bold text-sm uppercase tracking-widest"
         >
-          Isso não é um e-book
+          Protocolo Testado em 30 Dias
         </motion.span>
         
         <h1 className="text-5xl md:text-8xl font-display font-extrabold leading-tight uppercase tracking-tighter">
-          Skincare <span className="gradient-text">Inteligente</span>
+          RESGATE CAPILAR <span className="gradient-text">30 D</span>
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto font-medium">
-          Uma <span className="text-white font-bold">Inteligência Artificial</span> treinada com raciocínio médico para montar seu skincare personalizado.
+          Reduza a queda capilar e fortaleça seus fios em 30 dias com um protocolo simples, prático e baseado em ciência.
         </p>
 
         <motion.div 
@@ -40,14 +40,14 @@ export const Hero = () => {
           transition={{ delay: 0.3 }}
           className="text-lg md:text-xl text-brand-lime font-bold max-w-3xl mx-auto leading-relaxed uppercase tracking-wide"
         >
-          Seu primeiro sistema de prescrição 100% personalizado que cria sua rotina completa com produtos reais, ordem correta e previsão de resultados <span className="text-white underline decoration-brand-pink underline-offset-4">SEM SAIR DE CASA</span>
+          Você emagreceu. Fez tudo certo. Mas agora paga o preço com queda, afinamento e medo de ficar careca. <span className="text-white underline decoration-brand-pink underline-offset-4 font-bold uppercase tracking-wide">ESTE É O PROTOCOLO QUE VOCÊ PRECISA!</span>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-8">
           {[
-            { icon: Smartphone, text: "Você responde." },
-            { icon: Brain, text: "Ela analisa." },
-            { icon: Sparkles, text: "E entrega sua rotina pronta." }
+            { icon: AlertTriangle, text: "Trava a Queda." },
+            { icon: Zap, text: "Ativa o Crescimento." },
+            { icon: Activity, text: "Monitora os Resultados." }
           ].map((item, i) => (
             <motion.div 
               key={i}
@@ -69,20 +69,20 @@ export const Hero = () => {
           className="space-y-6"
         >
           <div className="flex flex-col items-center gap-2">
-            <span className="text-gray-400 line-through text-xl">De R$97</span>
+            <span className="text-gray-400 line-through text-xl">De R$197</span>
             <div className="flex flex-col items-center">
               <span className="text-5xl md:text-6xl font-display font-black text-brand-lime">
-                R$ 47 à vista
+                R$ 37 à vista
               </span>
               <span className="text-xl md:text-2xl font-bold text-white">
-                ou 6x de R$ 8,82
+                ou 12x de R$ 3,71
               </span>
-              <span className="text-sm uppercase tracking-widest text-brand-pink font-bold mt-1">Valor Promocional</span>
+              <span className="text-sm uppercase tracking-widest text-brand-pink font-bold mt-1">Oferta Exclusiva</span>
             </div>
           </div>
           
           <Button href="#checkout" className="text-xl group">
-            Quero meu IA Skincare agora
+            Quero acessar agora
             <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
           </Button>
           

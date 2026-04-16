@@ -34,27 +34,27 @@ export const Benefits = () => {
           viewport={{ once: true }}
           className="space-y-6"
         >
-          <h3 className="text-3xl md:text-4xl font-display font-black leading-tight">
-            PRAZER, EU SOU <br />
-            <span className="gradient-text">DRA EMANUELLE SAMARY</span>
+          <h3 className="text-3xl md:text-4xl font-display font-black leading-tight uppercase">
+            Sua guia nessa jornada: <br />
+            <span className="gradient-text">Dra Emanuelle Samary</span>
           </h3>
           
           <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
             <p>
-              Médica desde 2013, construí minha trajetória unindo <span className="text-white font-bold">Estética, Dermatologia e Nutrologia</span> com anos de prática clínica real entre São Luís e São Paulo.
+              Médica desde 2013, com atuação em <span className="text-white font-bold">Saúde Capilar, Nutrologia e Estética</span>. Dedico minha prática clínica a tratar a raiz dos problemas.
             </p>
 
             <p>
-              No consultório, vi um padrão: pessoas confusas gastando muito sem resultados. Elas não precisavam de mais ativos, precisavam de <span className="text-brand-lime font-bold italic">organização</span>.
+              Vi milhares de pacientes perdendo a autoestima após o emagrecimento. O problema não é falta de shampoo, é um <span className="text-brand-lime font-bold italic">colapso metabólico capilar</span>.
             </p>
 
             <p className="text-white font-medium">
-              Treinei esta IA com meus próprios protocolos e raciocínio clínico para levar minha experiência além do consultório.
+              Este protocolo condensa meu raciocínio clínico para que você recupere seus fios sem precisar gastar fortunas em consultório.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
-            {["Personalização real", "Previsibilidade", "Clareza total"].map((item, i) => (
+            {["Raciocínio Clínico", "Densidade Real", "Fim da Queda"].map((item, i) => (
               <div key={i} className="flex items-center gap-2 font-bold text-brand-lime">
                 <CheckCircle2 className="w-5 h-5 text-brand-pink" />
                 {item}
@@ -67,9 +67,9 @@ export const Benefits = () => {
       {/* Benefits Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {[
-          { icon: Clock, title: "Economia de Tempo", desc: "Pare de pesquisar por horas. Tenha sua rotina em minutos." },
-          { icon: DollarSign, title: "Economia de Dinheiro", desc: "Compre apenas o que sua pele realmente precisa." },
-          { icon: ShieldCheck, title: "Segurança Total", desc: "Evite misturas de ativos que podem queimar sua pele." }
+          { icon: Clock, title: "Rapidez nos Resultados", desc: "Protocolo de choque para ver os primeiros resultados ja em 30 dias." },
+          { icon: DollarSign, title: "Economia Inteligente", desc: "Pare de comprar suplementos caros que não funcionam no seu caso." },
+          { icon: ShieldCheck, title: "Segurança Médica", desc: "Protocolo testado e baseado em pilares clínicos consolidados." }
         ].map((item, i) => (
           <Card key={i} variant="solid" className="text-center space-y-4" delay={i * 0.1}>
             <div className="mx-auto w-16 h-16 rounded-2xl bg-brand-lime/10 flex items-center justify-center">

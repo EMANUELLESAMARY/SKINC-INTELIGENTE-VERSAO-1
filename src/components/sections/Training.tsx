@@ -14,14 +14,14 @@ export const Training = () => {
           className="space-y-8"
         >
           <h2 className="text-4xl md:text-5xl font-display font-bold leading-tight">
-            Essa IA foi <span className="text-brand-pink">treinada</span> com:
+            O Desafio <span className="text-brand-pink">30 Dias</span> de Recuperação:
           </h2>
           
           <div className="space-y-6">
             {[
-              { icon: Stethoscope, title: "Protocolos clínicos reais", desc: "Baseado em milhares de casos dermatológicos de sucesso." },
-              { icon: Brain, title: "Raciocínio médico estruturado", desc: "Lógica diagnóstica aplicada à tecnologia de ponta." },
-              { icon: Zap, title: "Análise avançada", desc: "Forma profunda de analisar pele e metabolismo cutâneo." }
+              { icon: Stethoscope, title: "Baseado em Ciência", desc: "Protocolo criado para interromper o ciclo de queda causado pelo emagrecimento rápido." },
+              { icon: Brain, title: "Plano Diário Guiado", desc: "Nutrição, cuidados tópicos e estímulos que reorganizam o ciclo capilar." },
+              { icon: Zap, title: "Ação na Raiz", desc: "Atua na deficiência nutricional, estresse metabólico e falha no ciclo do fio." }
             ].map((item, i) => (
               <div key={i} className="flex gap-4">
                 <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-brand-pink/10 flex items-center justify-center">
@@ -38,13 +38,13 @@ export const Training = () => {
 
         <Card variant="glass" className="border-brand-lime/20 relative p-10">
           <div className="absolute -top-6 -right-6 w-24 h-24 bg-brand-lime/20 blur-3xl rounded-full" />
-          <h3 className="text-3xl font-display font-bold mb-6">O resultado?</h3>
+          <h3 className="text-3xl font-display font-bold mb-6">O diferencial?</h3>
           <p className="text-2xl font-medium text-brand-lime mb-8">
-            Um sistema que une: Experiência médica + tecnologia.
+            Você não anda no escuro. Você tem clareza e ferramentas reais.
           </p>
           
           <ul className="space-y-4">
-            {["Sem achismo.", "Sem tentativa e erro.", "Sem confusão."].map((text, i) => (
+            {["Menos queda.", "Fios mais fortes.", "Crescimento reativado."].map((text, i) => (
               <li key={i} className="flex items-center gap-3 text-xl font-bold">
                 <CheckCircle2 className="w-6 h-6 text-brand-pink" />
                 {text}

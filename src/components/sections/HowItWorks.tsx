@@ -6,50 +6,38 @@ import { Button } from "../ui/Button";
 
 export const HowItWorks = () => {
   return (
-    <Section>
+    <Section id="how-it-works">
       <SectionHeader 
-        title="Como Funciona" 
-        subtitle="Você responde um questionário estratégico e nossa IA faz o trabalho pesado."
+        title="O Caminho da Recuperação" 
+        subtitle="3 passos fundamentais para você retomar o controle do seu cabelo."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Step 1 */}
         <Card variant="glass" className="space-y-6">
           <div className="w-14 h-14 rounded-full bg-brand-lime text-brand-purple flex items-center justify-center text-2xl font-black">1</div>
-          <h3 className="text-2xl font-bold">A IA avalia:</h3>
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              "Tipo de pele", "Nível inflamatório", "Sensibilidade", 
-              "Histórico de reação", "Idade biológica", "Prioridades"
-            ].map((item, i) => (
-              <div key={i} className="flex items-center gap-2 text-gray-300">
-                <div className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
-                {item}
-              </div>
-            ))}
-          </div>
+          <h3 className="text-2xl font-bold">Diagnóstico de Nível</h3>
+          <p className="text-gray-400">
+            Use o termômetro capilar para identificar se sua queda está em nível de risco, alerta ou perigo. Sai da ansiedade, entra no controle.
+          </p>
         </Card>
 
         {/* Step 2 */}
-        <Card variant="glass" className="space-y-6 border-brand-pink/30 bg-brand-pink/5">
+        <Card variant="glass" className="space-y-6">
           <div className="w-14 h-14 rounded-full bg-brand-pink text-white flex items-center justify-center text-2xl font-black">2</div>
-          <h3 className="text-2xl font-bold flex items-center gap-2">
-            <Microscope className="w-6 h-6 text-brand-pink" />
-            E entrega:
-          </h3>
-          <p className="text-xl font-bold text-brand-pink">
-            Um protocolo completo, estruturado e exclusivo para você
+          <h3 className="text-2xl font-bold font-bold">Estabilização</h3>
+          <p className="text-gray-400">
+            Aplique o protocolo de choque para interromper a queda excessiva e preparar o couro cabeludo para o crescimento.
           </p>
-          <div className="space-y-3">
-            {[
-              "Produtos reais", "Ordem correta", "Frequência exata", "Combinações seguras"
-            ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3 font-medium">
-                <CheckCircle2 className="w-5 h-5 text-brand-pink" />
-                {item}
-              </div>
-            ))}
-          </div>
+        </Card>
+
+        {/* Step 3 */}
+        <Card variant="glass" className="space-y-6">
+          <div className="w-14 h-14 rounded-full bg-brand-lime text-brand-purple flex items-center justify-center text-2xl font-black">3</div>
+          <h3 className="text-2xl font-bold">Fortalecimento</h3>
+          <p className="text-gray-400">
+            Ative o crescimento de novos fios e devolva densidade ao cabelo com técnicas práticas e nutrição direcionada.
+          </p>
         </Card>
       </div>
 
@@ -60,13 +48,13 @@ export const HowItWorks = () => {
         className="mt-20 text-center space-y-8"
       >
         <div className="inline-block p-8 glass-card border-brand-lime/30">
-          <h4 className="text-3xl font-display font-bold mb-4">Tudo pronto.</h4>
-          <p className="text-xl text-gray-400">Sem precisar pensar. Sem precisar testar.</p>
+          <h4 className="text-3xl font-display font-bold mb-4">Você no controle.</h4>
+          <p className="text-xl text-gray-400">Menos queda, mais segurança ao se olhar no espelho.</p>
         </div>
         
         <div>
           <Button href="#checkout" className="text-xl group">
-            Gerar meu protocolo agora
+            Quero acessar agora
             <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
