@@ -24,7 +24,7 @@ export const CTA = () => {
           <div className="flex flex-col items-center gap-2 mb-8">
             <span className="text-2xl text-gray-500 line-through lowercase">De R$ 197,00 por apenas</span>
             <span className="text-7xl font-display font-black text-white">R$ 37,00</span>
-            <p className="text-xl font-bold text-brand-lime uppercase">ou 12x de R$ 3,71</p>
+            <p className="text-xl font-bold text-brand-lime uppercase">ou 5x de R$ 8,19</p>
             <p className="text-sm text-brand-pink font-bold uppercase tracking-widest mt-1">Acesso Vitalício + Bônus</p>
           </div>
           
