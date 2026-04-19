@@ -26,22 +26,22 @@ export const NotificationPopup = () => {
       setData({ name, city });
       setVisible(true);
 
-      // Hide after 6 seconds
+      // Hide after 5 seconds
       const hideTimeout = setTimeout(() => {
         setVisible(false);
-      }, 6000);
+      }, 5000);
       
       return hideTimeout;
     };
 
-    // First notification after 8 seconds
+    // First notification after 3 seconds
     const initialTimer = setTimeout(() => {
       showNotification();
-    }, 8000);
+    }, 3000);
 
-    // Dynamic interval between 50 and 80 seconds
+    // Dynamic interval between 10 and 20 seconds
     const intervalTrigger = () => {
-      const nextDelay = 50000 + Math.random() * 30000;
+      const nextDelay = 10000 + Math.random() * 10000;
       return setTimeout(() => {
         showNotification();
         intervalTrigger();
@@ -51,7 +51,7 @@ export const NotificationPopup = () => {
     let nextTimer: NodeJS.Timeout;
     const startCycle = setTimeout(() => {
       nextTimer = intervalTrigger();
-    }, 15000);
+    }, 5000);
 
     return () => {
       clearTimeout(initialTimer);
