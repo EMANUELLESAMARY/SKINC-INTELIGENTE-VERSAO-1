@@ -70,21 +70,21 @@ export const NotificationPopup = () => {
           transition={{ type: "spring", damping: 25, stiffness: 200 }}
           className="fixed bottom-6 left-6 z-50 pointer-events-none select-none"
         >
-          <div className="bg-brand-purple-light/95 backdrop-blur-xl border border-white/10 rounded-2xl p-4 shadow-2xl flex items-center gap-4 max-w-[320px]">
-            <div className="w-12 h-12 rounded-full bg-brand-lime/20 flex items-center justify-center flex-shrink-0 relative">
-               <div className="absolute inset-0 rounded-full animate-ping bg-brand-lime/10" />
-               <ShoppingCart className="w-6 h-6 text-brand-lime relative z-10" />
+          <div className="bg-yellow-400 border border-yellow-500 rounded-2xl p-4 shadow-2xl flex items-center gap-4 max-w-[320px]">
+            <div className="w-12 h-12 rounded-full bg-black/10 flex items-center justify-center flex-shrink-0 relative">
+               <div className="absolute inset-0 rounded-full animate-ping bg-black/5" />
+               <ShoppingCart className="w-6 h-6 text-black relative z-10" />
             </div>
             <div className="flex-1">
-              <p className="text-white text-sm font-medium leading-tight">
-                <span className="text-brand-lime font-bold">{data.name}</span> de {data.city}
+              <p className="text-black text-sm font-medium leading-tight">
+                <span className="font-bold">{data.name}</span> de {data.city}
               </p>
-              <p className="text-gray-400 text-xs mt-0.5">
-                Acabou de adquirir o <span className="text-white">Resgate Capilar 30D</span>
+              <p className="text-black/80 text-xs mt-0.5">
+                Acabou de adquirir o <span className="font-bold text-black">Resgate Capilar 30D</span>
               </p>
               <div className="flex items-center gap-1.5 mt-2">
-                 <div className="w-1.5 h-1.5 rounded-full bg-brand-lime animate-pulse" />
-                 <span className="text-[10px] text-brand-lime uppercase font-bold tracking-widest">Acesso liberado</span>
+                 <div className="w-1.5 h-1.5 rounded-full bg-black animate-pulse" />
+                 <span className="text-[10px] text-black uppercase font-bold tracking-widest">Acesso liberado</span>
               </div>
             </div>
           </div>
