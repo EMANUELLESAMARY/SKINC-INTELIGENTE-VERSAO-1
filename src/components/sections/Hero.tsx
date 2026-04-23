@@ -1,8 +1,20 @@
+import { useState } from "react";
 import { motion } from "motion/react";
-import { ArrowRight, Activity, Zap, AlertTriangle, ShieldCheck, ChevronDown } from "lucide-react";
+import { ArrowRight, Activity, Zap, AlertTriangle, ShieldCheck, ChevronDown, Play } from "lucide-react";
 import { Button } from "../ui/Button";
 
-export const Hero = () => {
+interface HeroProps {
+  onVideoStart: () => void;
+}
+
+export const Hero = ({ onVideoStart }: HeroProps) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => {
+    setIsPlaying(true);
+    onVideoStart();
+  };
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 pb-32 px-6 overflow-hidden">
       {/* Background Decorative Elements */}
@@ -26,10 +38,32 @@ export const Hero = () => {
           Protocolo Testado em 30 Dias
         </motion.span>
         
-        <h1 className="text-5xl md:text-8xl font-display font-extrabold leading-tight uppercase tracking-tighter">
+        <h1 className="text-5xl md:text-7xl font-display font-extrabold leading-tight uppercase tracking-tighter">
           RESGATE CAPILAR <span className="gradient-text">30 D</span>
         </h1>
         
+        {/* VSL Video Container */}
+        <div className="relative w-full aspect-video max-w-4xl mx-auto rounded-3xl overflow-hidden border-2 border-white/10 shadow-2xl bg-black mb-12">
+          {!isPlaying && (
+            <div 
+              className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/60 backdrop-blur-md cursor-pointer group transition-all duration-300"
+              onClick={handlePlay}
+            >
+              <div className="w-20 h-20 rounded-full bg-brand-pink flex items-center justify-center shadow-[0_0_30px_rgba(255,0,153,0.4)] group-hover:scale-110 transition-transform duration-300">
+                <Play className="w-8 h-8 text-white fill-white ml-1" />
+              </div>
+              <p className="mt-4 text-white font-bold uppercase tracking-widest text-sm animate-pulse px-6 text-center">Clique aqui para ver a apresentação</p>
+            </div>
+          )}
+          
+          <iframe
+            src="https://drive.google.com/file/d/17mCKPrCrWTU49f-MRMJaRir1cWTKQwOA/preview"
+            className="absolute inset-0 w-full h-full z-10"
+            allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer"
+            frameBorder="0"
+          ></iframe>
+        </div>
+
         <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto font-medium">
           Reduza a queda capilar e fortaleça seus fios em 30 dias com um protocolo simples, prático e baseado em ciência.
         </p>
@@ -40,65 +74,40 @@ export const Hero = () => {
           transition={{ delay: 0.3 }}
           className="text-lg md:text-xl text-brand-lime font-bold max-w-3xl mx-auto leading-relaxed uppercase tracking-wide"
         >
-          Você emagreceu. Fez tudo certo. Mas agora paga o preço com queda, afinamento e medo de ficar careca. <span className="text-white underline decoration-brand-pink underline-offset-4 font-bold uppercase tracking-wide">ESTE É O PROTOCOLO QUE VOCÊ PRECISA!</span>
+          Assista ao vídeo acima para entender como destravar o seu crescimento capilar hoje mesmo.
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-8">
-          {[
-            { icon: AlertTriangle, text: "Trava a Queda." },
-            { icon: Zap, text: "Ativa o Crescimento." },
-            { icon: Activity, text: "Monitora os Resultados." }
-          ].map((item, i) => (
-            <motion.div 
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 + (i * 0.1) }}
-              className="bg-brand-purple-light/50 backdrop-blur-md border border-brand-pink/20 p-6 rounded-2xl flex flex-col items-center gap-3"
-            >
-              <item.icon className="w-8 h-8 text-brand-lime" />
-              <span className="font-bold text-lg">{item.text}</span>
-            </motion.div>
-          ))}
-        </div>
-
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          className="space-y-6"
-        >
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-gray-400 line-through text-xl">De R$197</span>
-            <div className="flex flex-col items-center">
-              <span className="text-5xl md:text-6xl font-display font-black text-brand-lime">
-                R$ 37,00 à vista
-              </span>
-              <span className="text-xl md:text-2xl font-bold text-white">
-                ou 5x de R$ 8,19
-              </span>
-              <span className="text-sm uppercase tracking-widest text-brand-pink font-bold mt-1">Oferta Exclusiva</span>
-            </div>
+        {!isPlaying && (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-8">
+            {[
+              { icon: AlertTriangle, text: "Trava a Queda." },
+              { icon: Zap, text: "Ativa o Crescimento." },
+              { icon: Activity, text: "Monitora os Resultados." }
+            ].map((item, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 + (i * 0.1) }}
+                className="bg-brand-purple-light/50 backdrop-blur-md border border-brand-pink/20 p-6 rounded-2xl flex flex-col items-center gap-3"
+              >
+                <item.icon className="w-8 h-8 text-brand-lime" />
+                <span className="font-bold text-lg">{item.text}</span>
+              </motion.div>
+            ))}
           </div>
-          
-          <Button href="#checkout" className="text-xl group">
-            Quero acessar agora
-            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          
-          <p className="text-sm text-gray-400 flex items-center justify-center gap-2">
-            <ShieldCheck className="w-4 h-4" /> Acesso imediato e seguro
-          </p>
-        </motion.div>
+        )}
       </motion.div>
 
-      <motion.div 
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-gray-500"
-      >
-        <ChevronDown className="w-8 h-8" />
-      </motion.div>
+      {!isPlaying && (
+        <motion.div 
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-gray-500"
+        >
+          <ChevronDown className="w-8 h-8" />
+        </motion.div>
+      )}
     </section>
   );
 };
