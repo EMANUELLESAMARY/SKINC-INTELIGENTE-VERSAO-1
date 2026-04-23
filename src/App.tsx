@@ -46,11 +46,10 @@ export default function App() {
             <Benefits />
             <CTA />
             <Footer />
+            <NotificationPopup />
           </motion.div>
         )}
       </AnimatePresence>
-
-      <NotificationPopup />
     </div>
   );
 }

@@ -42,11 +42,12 @@ export const Hero = ({ onVideoStart }: HeroProps) => {
           RESGATE CAPILAR <span className="gradient-text">30 D</span>
         </h1>
         
-        {/* VSL Video Container */}
+        {/* VSL Video Container with Masking to hide Drive UI */}
         <div className="relative w-full aspect-video max-w-4xl mx-auto rounded-3xl overflow-hidden border-2 border-white/10 shadow-2xl bg-black mb-12">
+          {/* Cover Interaction Layer */}
           {!isPlaying && (
             <div 
-              className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/60 backdrop-blur-md cursor-pointer group transition-all duration-300"
+              className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-black/60 backdrop-blur-md cursor-pointer group transition-all duration-300"
               onClick={handlePlay}
             >
               <div className="w-20 h-20 rounded-full bg-brand-pink flex items-center justify-center shadow-[0_0_30px_rgba(255,0,153,0.4)] group-hover:scale-110 transition-transform duration-300">
@@ -56,12 +57,18 @@ export const Hero = ({ onVideoStart }: HeroProps) => {
             </div>
           )}
           
-          <iframe
-            src="https://drive.google.com/file/d/17mCKPrCrWTU49f-MRMJaRir1cWTKQwOA/preview"
-            className="absolute inset-0 w-full h-full z-10"
-            allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer"
-            frameBorder="0"
-          ></iframe>
+          {/* Iframe Cropping Container to hide Drive Header/Sidebar */}
+          <div className="absolute inset-0 z-10 w-full h-full overflow-hidden">
+            <iframe
+              src="https://drive.google.com/file/d/17mCKPrCrWTU49f-MRMJaRir1cWTKQwOA/preview"
+              className="absolute w-full h-[calc(100%+80px)] -top-[40px] left-0 pointer-events-auto"
+              allow="autoplay; fullscreen; picture-in-picture"
+              frameBorder="0"
+            ></iframe>
+          </div>
+          
+          {/* Anti-Escape Protection Layer (Optional but helpful: blocks clicks to sensitive areas) */}
+          <div className="absolute top-0 right-0 w-24 h-16 z-20 pointer-events-none" />
         </div>
 
         <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto font-medium">
