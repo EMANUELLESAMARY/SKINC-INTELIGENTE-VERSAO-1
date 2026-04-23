@@ -61,14 +61,16 @@ export const Hero = ({ onVideoStart }: HeroProps) => {
           <div className="absolute inset-0 z-10 w-full h-full overflow-hidden">
             <iframe
               src="https://drive.google.com/file/d/17mCKPrCrWTU49f-MRMJaRir1cWTKQwOA/preview"
-              className="absolute w-full h-[calc(100%+80px)] -top-[40px] left-0 pointer-events-auto"
+              className="absolute w-full h-[calc(100%+120px)] -top-[60px] left-0 pointer-events-auto scale-[1.01]"
               allow="autoplay; fullscreen; picture-in-picture"
               frameBorder="0"
             ></iframe>
+            
+            {/* Top-Right Blocker (Specifically to prevent clicking the escape/pop-out button) */}
+            <div className="absolute top-0 right-0 w-32 h-20 z-20 cursor-default" />
+            {/* Top-Left Blocker (Title area) */}
+            <div className="absolute top-0 left-0 w-full h-16 z-20 cursor-default" />
           </div>
-          
-          {/* Anti-Escape Protection Layer (Optional but helpful: blocks clicks to sensitive areas) */}
-          <div className="absolute top-0 right-0 w-24 h-16 z-20 pointer-events-none" />
         </div>
 
         <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto font-medium">
