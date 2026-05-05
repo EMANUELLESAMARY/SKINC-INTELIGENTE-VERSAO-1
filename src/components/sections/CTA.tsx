@@ -29,11 +29,11 @@ export const CTA = () => {
           </div>
           
           <Button 
-            href="https://pay.hotmart.com/A104700280D?checkoutMode=10&bid=1775493345458" 
+            href="https://pay.hotmart.com/A104700280D?off=zfz4u0q8&checkoutMode=10" 
             className="w-full text-2xl py-6"
             onClick={(e) => {
               e.preventDefault();
-              const checkoutUrl = "https://pay.hotmart.com/A104700280D?checkoutMode=10&bid=1775493345458";
+              const checkoutUrl = "https://pay.hotmart.com/A104700280D?off=zfz4u0q8&checkoutMode=10";
               
               if (typeof (window as any).fbq === 'function') {
                 (window as any).fbq('track', 'InitiateCheckout', {
